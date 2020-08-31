@@ -22,7 +22,7 @@ fun main (){
     var resultPrice = 0
 
     if(previousBuy <= 1000 ) resultPrice = product
-    else if (previousBuy > 1000 && previousBuy < 10000) resultPrice = product - 100
+    else if (previousBuy in 1001..9999) resultPrice = product - 100
     else resultPrice = (product * 0.95).toInt()
 
     if(meloman) println("Стоимость товара: $product. Стоимость после скидки: " + (resultPrice*0.99))
